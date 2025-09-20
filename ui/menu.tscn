@@ -35,4 +35,14 @@ alignment = 2
 [node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Jugar"
+text = "Play"
+
+[node name="Creditos" type="Button" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cedits"
+
+[node name="End" type="Button" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "End"
