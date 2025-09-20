@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://8o1a4pglcsx6"]
+[gd_scene load_steps=4 format=3 uid="uid://8o1a4pglcsx6"]
 
 [ext_resource type="Script" uid="uid://ucdksh2hp6hy" path="res://ui/menu.gd" id="1_bwjgb"]
+[ext_resource type="PackedScene" uid="uid://xxmlv1a104va" path="res://ui/panel_menu.tscn" id="2_udkah"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxhxg"]
 content_margin_left = 50.0
@@ -27,22 +28,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qxhxg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="PanelMenu" parent="PanelContainer" instance=ExtResource("2_udkah")]
 layout_mode = 2
-theme_override_constants/separation = 8
-alignment = 2
 
-[node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="PanelContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 
-[node name="Creditos" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Creditos" type="Button" parent="PanelContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Cedits"
 
-[node name="End" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="End" type="Button" parent="PanelContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "End"

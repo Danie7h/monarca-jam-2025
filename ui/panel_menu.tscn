@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://xxmlv1a104va"]
+
+[ext_resource type="Script" uid="uid://de2vfrfxsh6h" path="res://ui/panel_menu.gd" id="1_k31o4"]
+
+[node name="PanelMenu" type="BoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+vertical = true
+script = ExtResource("1_k31o4")

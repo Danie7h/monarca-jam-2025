@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://8nvof4qxryt2"]
+[gd_scene load_steps=9 format=3 uid="uid://8nvof4qxryt2"]
 
 [ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="1_2vhvd"]
+[ext_resource type="Script" uid="uid://dk8o404cgmpr7" path="res://levels/level.gd" id="1_etmhd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2vhvd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,7 +22,9 @@ size = Vector3(31.968925, 0.5, 31.968903)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2vhvd"]
 
-[node name="Scene" type="Node3D"]
+[node name="Level3D" type="Node3D"]
+script = ExtResource("1_etmhd")
+metadata/_custom_type_script = "uid://dk8o404cgmpr7"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7xx5m")
