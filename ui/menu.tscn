@@ -28,20 +28,29 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qxhxg")
 
-[node name="PanelMenu" parent="PanelContainer" instance=ExtResource("2_udkah")]
+[node name="BoxContainer" type="BoxContainer" parent="PanelContainer"]
+layout_mode = 2
+vertical = true
+
+[node name="DisplayMenu" type="PanelContainer" parent="PanelContainer/BoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelMenu" parent="PanelContainer/BoxContainer" instance=ExtResource("2_udkah")]
 layout_mode = 2
 
-[node name="Start" type="Button" parent="PanelContainer/PanelMenu"]
+[node name="Start" type="Button" parent="PanelContainer/BoxContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "btn_start"
 
-[node name="Credited" type="Button" parent="PanelContainer/PanelMenu"]
+[node name="Credited" type="Button" parent="PanelContainer/BoxContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "btn_credited"
 
-[node name="Exit" type="Button" parent="PanelContainer/PanelMenu"]
+[node name="Exit" type="Button" parent="PanelContainer/BoxContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "btn_exit"
