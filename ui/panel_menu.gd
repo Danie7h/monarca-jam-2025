@@ -5,13 +5,11 @@ class_name PanelMenu
 
 var option_focus := 0
 
-#func _ready() -> void:
-	#resumen.connect("button_down", func () -> void: LEVELS.toogle_pause(false))
-
 
 func _process(delta: float) -> void:
 	gamepad()
-	
+
+
 func gamepad() -> void:
 	if Input.is_action_just_pressed("ui_up"):
 		option_focus -= 1

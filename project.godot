@@ -93,6 +93,11 @@ ui_pause={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://ui/i18n/translate.en.translation", "res://ui/i18n/translate.es.translation")
+locale/include_text_server_data=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

@@ -34,14 +34,14 @@ layout_mode = 2
 [node name="Start" type="Button" parent="PanelContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Play"
+text = "btn_start"
 
-[node name="Creditos" type="Button" parent="PanelContainer/PanelMenu"]
+[node name="Credited" type="Button" parent="PanelContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Cedits"
+text = "btn_credited"
 
-[node name="End" type="Button" parent="PanelContainer/PanelMenu"]
+[node name="Exit" type="Button" parent="PanelContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "End"
+text = "btn_exit"

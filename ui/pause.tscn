@@ -43,4 +43,4 @@ metadata/_custom_type_script = "uid://de2vfrfxsh6h"
 [node name="Resumen" type="Button" parent="PanelContainer/BoxContainer/BoxContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "resumen"
+text = "btn_resume"
