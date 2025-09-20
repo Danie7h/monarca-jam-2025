@@ -29,7 +29,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Econous"
+text = "Paulina Marín:  Game Design | Screenplay"
 
 [node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -41,7 +41,7 @@ text = "Freddy - ZombieByte"
 
 [node name="Label4" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "dux music"
+text = "Eduardo Fierro (Dux musiclab) - musica y diseño sonoro"
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2

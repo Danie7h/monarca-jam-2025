@@ -8,6 +8,7 @@ extends Control
 
 var option_focus := 0
 
+
 func _ready() -> void:
 	start.connect("button_down", func() -> void:
 		get_tree().change_scene_to_file('res://levels/test/scene.tscn')
