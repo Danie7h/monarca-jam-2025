@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://8o1a4pglcsx6"]
+
+[ext_resource type="Script" uid="uid://ucdksh2hp6hy" path="res://ui/menu.gd" id="1_bwjgb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxhxg"]
+content_margin_left = 50.0
+content_margin_top = 50.0
+content_margin_right = 50.0
+content_margin_bottom = 50.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bwjgb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qxhxg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jugar"
