@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm0qxo5p35xvf"]
+
+[ext_resource type="Script" uid="uid://bbkji5eyai6se" path="res://rooms/door.gd" id="1_7qc5k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rjirw"]
+size = Vector3(1, 2.0231934, 0.3914795)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7qc5k"]
+
+[node name="Door" type="Node3D"]
+script = ExtResource("1_7qc5k")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+physics_interpolation_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9974365, 0.018493652)
+shape = SubResource("BoxShape3D_rjirw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(0.31970477, 0, 0, 0, 0.7347866, 0, 0, 0, 0.14316961, 0, 0.9894912, 0.1277622)
+mesh = SubResource("BoxMesh_7qc5k")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

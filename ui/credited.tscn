@@ -33,11 +33,11 @@ text = "Paulina Marín:  Game Design | Screenplay"
 
 [node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Daniel Andres"
+text = "Daniel Andres: Developer | Devops"
 
 [node name="Label3" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Freddy - ZombieByte"
+text = "Freddy - ZombieByteZombieByte - 3D Artist"
 
 [node name="Label4" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
