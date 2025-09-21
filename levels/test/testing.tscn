@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://xjeax20oayhf"]
+
+[ext_resource type="Script" uid="uid://bevaa5u6egxuv" path="res://levels/test/testing.gd" id="1_vgdap"]
+[ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="2_ugi53"]
+[ext_resource type="PackedScene" uid="uid://bm0qxo5p35xvf" path="res://rooms/door.tscn" id="3_vgdap"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmpd2"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ugi53"]
+sky_material = SubResource("ProceduralSkyMaterial_kmpd2")
+
+[sub_resource type="Environment" id="Environment_vgdap"]
+background_mode = 2
+sky = SubResource("Sky_ugi53")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_kmpd2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kmpd2"]
+size = Vector3(32.0399, 0.5073242, 31.862518)
+
+[node name="Testing" type="Node3D"]
+script = ExtResource("1_vgdap")
+metadata/_custom_type_script = "uid://dk8o404cgmpr7"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vgdap")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(31.993645, 0, 0, 0, 0.44781306, 0, 0, 0, 31.65592, 0, -0.22356367, 0)
+mesh = SubResource("BoxMesh_kmpd2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058998108, -0.24633789, -0.00019836426)
+shape = SubResource("BoxShape3D_kmpd2")
+
+[node name="Door" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("3_vgdap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41399717, 0, -6.5740457)
+key = "bunker"
+marker = NodePath("../Buncker")
+
+[node name="Buncker" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.775447)
+
+[node name="Player" parent="." instance=ExtResource("2_ugi53")]

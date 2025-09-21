@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LEVELS="*res://autoloads/levels.gd"
 RunConfigManager="*res://addons/run-configs/run-config-manager.gd"
+TOOLS="*res://autoloads/tools.gd"
 
 [editor_plugins]
 
@@ -107,8 +108,9 @@ locale/include_text_server_data=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 
 [run_configs]
 
-data/configs=["{\"custom_scene\":\"res://rooms/bunker_entrance/bunker_entrance.tscn\",\"environment_variables\":{},\"name\":\"bunker\",\"play_mode\":2}", "{\"custom_scene\":\"res://levels/test/scene.tscn\",\"environment_variables\":{},\"name\":\"testing\",\"play_mode\":2}"]
+data/configs=["{\"custom_scene\":\"res://rooms/bunker_entrance/bunker_entrance.tscn\",\"environment_variables\":{},\"name\":\"bunker\",\"play_mode\":2}", "{\"custom_scene\":\"res://levels/test/testing.tscn\",\"environment_variables\":{},\"name\":\"testing\",\"play_mode\":2}"]
 data/current=1

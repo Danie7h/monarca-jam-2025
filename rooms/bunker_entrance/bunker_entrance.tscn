@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://56fv277ohqem"]
+[gd_scene load_steps=7 format=3 uid="uid://56fv277ohqem"]
 
 [ext_resource type="PackedScene" uid="uid://bm0qxo5p35xvf" path="res://rooms/door.tscn" id="1_bbdnt"]
-[ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="1_ld7x6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fx4i4"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,9 +15,9 @@ sky = SubResource("Sky_etmhd")
 tonemap_mode = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbdnt"]
-size = Vector3(10.623679, 0.4951172, 5.607457)
+size = Vector3(6.099756, 0.4951172, 8.561157)
 
-[sub_resource type="BoxMesh" id="BoxMesh_rh2fj"]
+[sub_resource type="BoxMesh" id="BoxMesh_ld7x6"]
 
 [node name="BunkerEntrance" type="Node3D"]
 
@@ -30,17 +29,19 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.8378024)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027459621, -0.29174805, -0.030461788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8835068e-05, -0.29174805, 7.1323347)
 shape = SubResource("BoxShape3D_bbdnt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(10.59413, 0, 0, 0, 0.49102557, 0, 0, 0, 5.6260386, 0.009901816, -0.29059064, -0.024407424)
-mesh = SubResource("BoxMesh_rh2fj")
+transform = Transform3D(6.0978127, 0, 0, 0, 0.49102557, 0, 0, 0, 8.659176, 0.009901816, -0.29059064, 7.1555066)
+mesh = SubResource("BoxMesh_ld7x6")
 
-[node name="Door" parent="." instance=ExtResource("1_bbdnt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7723227)
+[node name="Door" parent="." node_paths=PackedStringArray("marker") instance=ExtResource("1_bbdnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4406067)
+key = "access_tunnel"
+marker = NodePath("../Marker3D")
 
-[node name="Player" parent="." instance=ExtResource("1_ld7x6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9325564, 0.87856376)
+[node name="Marker3D" type="Marker3D" parent="."]

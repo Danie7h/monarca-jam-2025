@@ -2,14 +2,13 @@ extends Node3D
 class_name Door
 
 
-@onready var collision := $Area3D/CollisionShape3D
-@export var room : String
+@onready var collision := $Area3D
+@export var key : String
+@export var marker: Node3D
 
 
 func _ready() -> void:
-	print(room)
-
-
-func _on_area_3d_area_entered(area: Area3D) -> void:
-	print(area)
-	print(load(room))
+	collision.connect("body_entered", func(body: Node3D) -> void:
+		if body.is_class('CharacterBody3D') and key and marker:
+			LEVELS.open_door.emit(key, marker)
+	)
