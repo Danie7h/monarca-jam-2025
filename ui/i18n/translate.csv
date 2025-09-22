@@ -1,7 +1,12 @@
 ﻿keys,es,en
-btn_start,Inicio,Start
+btn_start,Iniciar,Start
+btn_credited,Creditos a,Credited
 btn_exit,Salir,Exit
-btn_credited,Creditos,Credited
-btn_resume,Volver,Resume
-btn_reset,Resetar,Reset
+btn_resume,Vovler al juego,Resume
+btn_reset,Restablecer,Reset
+,,
+,,
+,,
+,,
+,,
 

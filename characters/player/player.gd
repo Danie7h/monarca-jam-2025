@@ -1,27 +1,44 @@
 extends CharacterBody3D
 
 @export_group("Movement Settings")
-@export var SPEED: float = 5.0
-@export var JUMP_VELOCITY: float = 4.5
+@export var SPEED := 5.0
+@export var JUMP_VELOCITY := 4.5
 
 @export_group("Look Settings")
-@export_range(0.001, 0.01, 0.001) var MOUSE_SENSITIVITY: float = 0.005
-@export_range(1.0, 5.0, 0.1) var CONTROLLER_SENSITIVITY: float = 3.0
+@export_range(0.001, 0.01, 0.001) var MOUSE_SENSITIVITY := 0.005
+@export_range(1.0, 5.0, 0.1) var CONTROLLER_SENSITIVITY := 3.0
 
-const MIN_PITCH_RAD: float = -1.2
-const MAX_PITCH_RAD: float = 1.2
+const MIN_PITCH_RAD := -1.2
+const MAX_PITCH_RAD := 1.2
 
-@onready var head: Node3D = $Head
-@onready var camera: Camera3D = $Head/Camera3D
+@onready var head := $Head
+@onready var camera := $Head/Camera3D
+@onready var inbox := %Inbox
 
 var is_paused := false
-
 var _gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+var keys: Dictionary[String, bool]
 
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	LEVELS.listen_paused.connect(func(value: bool) -> void: is_paused = value)
+	LEVELS.msg_player.connect(func(type_msg: String, msg: String) -> void:
+		var label_msg = Label.new()
+		label_msg.text = type_msg
+		inbox.add_child(label_msg)
+		var timer := Timer.new()
+		timer.timeout.connect(func() -> void:
+			label_msg.queue_free()
+			timer.queue_free()
+		)
+		add_child(timer)
+		timer.start(2)
+	)
+	LEVELS.lister_get_key.connect(func(key_name: String) -> void:
+		keys.set(key_name, true)
+		print(keys)
+	)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -42,10 +59,8 @@ func _physics_process(delta: float) -> void:
 		_apply_gravity(delta)
 		_handle_jump()
 		_handle_controller_look(delta)
-			
 		var input_direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		_handle_movement(input_direction)
-			
 		move_and_slide()
 
 
@@ -67,7 +82,7 @@ func _handle_controller_look(delta: float) -> void:
 
 func _handle_movement(input_dir: Vector2) -> void:
 	var direction: Vector3 = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -78,6 +93,5 @@ func _handle_movement(input_dir: Vector2) -> void:
 
 func _apply_look_rotation(rotation_delta: Vector2) -> void:
 	head.rotate_y(rotation_delta.x)
-	
 	camera.rotate_x(rotation_delta.y)
 	camera.rotation.x = clamp(camera.rotation.x, MIN_PITCH_RAD, MAX_PITCH_RAD)

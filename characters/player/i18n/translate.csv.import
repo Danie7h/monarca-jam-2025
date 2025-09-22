@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cruyraxa1b4if"
+
+[deps]
+
+files=["res://characters/player/i18n/translate.es.translation", "res://characters/player/i18n/translate.en.translation"]
+
+source_file="res://characters/player/i18n/translate.csv"
+dest_files=["res://characters/player/i18n/translate.es.translation", "res://characters/player/i18n/translate.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0
