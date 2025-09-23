@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj5qphuwpjth2"
-path.s3tc="res://.godot/imported/Metal_21-128x128_png.png-4774a24d4986312edc424e32ddd3a981.s3tc.ctex"
-path.etc2="res://.godot/imported/Metal_21-128x128_png.png-4774a24d4986312edc424e32ddd3a981.etc2.ctex"
+uid="uid://dgoge5avkjad5"
+path.s3tc="res://.godot/imported/crt_texture.png-f4bf9a47aaf93af98c112a4e24966af4.s3tc.ctex"
+path.etc2="res://.godot/imported/crt_texture.png-f4bf9a47aaf93af98c112a4e24966af4.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/Map/Metal_21-128x128_png.png"
-dest_files=["res://.godot/imported/Metal_21-128x128_png.png-4774a24d4986312edc424e32ddd3a981.s3tc.ctex", "res://.godot/imported/Metal_21-128x128_png.png-4774a24d4986312edc424e32ddd3a981.etc2.ctex"]
+source_file="res://levels/level_1/Map/crt_texture.png"
+dest_files=["res://.godot/imported/crt_texture.png-f4bf9a47aaf93af98c112a4e24966af4.s3tc.ctex", "res://.godot/imported/crt_texture.png-f4bf9a47aaf93af98c112a4e24966af4.etc2.ctex"]
 
 [params]
 

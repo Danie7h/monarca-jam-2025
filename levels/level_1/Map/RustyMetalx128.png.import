@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nrsdvkx87me5"
-path.s3tc="res://.godot/imported/RustyMetalx128.png-78e26b01b161fbb7b1e5ae6dc30dd769.s3tc.ctex"
-path.etc2="res://.godot/imported/RustyMetalx128.png-78e26b01b161fbb7b1e5ae6dc30dd769.etc2.ctex"
+path.s3tc="res://.godot/imported/RustyMetalx128.png-d2bb9e50b5d8bcd4ad29cd2894170467.s3tc.ctex"
+path.etc2="res://.godot/imported/RustyMetalx128.png-d2bb9e50b5d8bcd4ad29cd2894170467.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/Map/RustyMetalx128.png"
-dest_files=["res://.godot/imported/RustyMetalx128.png-78e26b01b161fbb7b1e5ae6dc30dd769.s3tc.ctex", "res://.godot/imported/RustyMetalx128.png-78e26b01b161fbb7b1e5ae6dc30dd769.etc2.ctex"]
+source_file="res://levels/level_1/Map/RustyMetalx128.png"
+dest_files=["res://.godot/imported/RustyMetalx128.png-d2bb9e50b5d8bcd4ad29cd2894170467.s3tc.ctex", "res://.godot/imported/RustyMetalx128.png-d2bb9e50b5d8bcd4ad29cd2894170467.etc2.ctex"]
 
 [params]
 

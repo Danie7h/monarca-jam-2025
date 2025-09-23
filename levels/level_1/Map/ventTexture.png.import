@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkxt1kdgflmq0"
-path.s3tc="res://.godot/imported/ventTexture.png-b15c981dab45f1dc72fbed02cce5f482.s3tc.ctex"
-path.etc2="res://.godot/imported/ventTexture.png-b15c981dab45f1dc72fbed02cce5f482.etc2.ctex"
+path.s3tc="res://.godot/imported/ventTexture.png-5a84b27a0d3ef1d4c2e130fffd27a12a.s3tc.ctex"
+path.etc2="res://.godot/imported/ventTexture.png-5a84b27a0d3ef1d4c2e130fffd27a12a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/Map/ventTexture.png"
-dest_files=["res://.godot/imported/ventTexture.png-b15c981dab45f1dc72fbed02cce5f482.s3tc.ctex", "res://.godot/imported/ventTexture.png-b15c981dab45f1dc72fbed02cce5f482.etc2.ctex"]
+source_file="res://levels/level_1/Map/ventTexture.png"
+dest_files=["res://.godot/imported/ventTexture.png-5a84b27a0d3ef1d4c2e130fffd27a12a.s3tc.ctex", "res://.godot/imported/ventTexture.png-5a84b27a0d3ef1d4c2e130fffd27a12a.etc2.ctex"]
 
 [params]
 

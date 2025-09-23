@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b50umsco1xpws"
-path="res://.godot/imported/level_1.glb-5a3552e0a62e48f12e311761c051d259.scn"
+uid="uid://cx0toq5x50j5k"
+path="res://.godot/imported/map_bunker.gltf-ac2d94e53bf4756ccec1a37550fe280f.scn"
 
 [deps]
 
-source_file="res://levels/level_1/level_1.glb"
-dest_files=["res://.godot/imported/level_1.glb-5a3552e0a62e48f12e311761c051d259.scn"]
+source_file="res://levels/level_1/Map/map_bunker.gltf"
+dest_files=["res://.godot/imported/map_bunker.gltf-ac2d94e53bf4756ccec1a37550fe280f.scn"]
 
 [params]
 

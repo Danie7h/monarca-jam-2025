@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5xir1b1i7y36"
-path.s3tc="res://.godot/imported/map_textures.png-0bc2db2335340132605fc725b32074ba.s3tc.ctex"
-path.etc2="res://.godot/imported/map_textures.png-0bc2db2335340132605fc725b32074ba.etc2.ctex"
+path.s3tc="res://.godot/imported/map_textures.png-371418d159f5effbbd9715519117457f.s3tc.ctex"
+path.etc2="res://.godot/imported/map_textures.png-371418d159f5effbbd9715519117457f.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/Map/map_textures.png"
-dest_files=["res://.godot/imported/map_textures.png-0bc2db2335340132605fc725b32074ba.s3tc.ctex", "res://.godot/imported/map_textures.png-0bc2db2335340132605fc725b32074ba.etc2.ctex"]
+source_file="res://levels/level_1/Map/map_textures.png"
+dest_files=["res://.godot/imported/map_textures.png-371418d159f5effbbd9715519117457f.s3tc.ctex", "res://.godot/imported/map_textures.png-371418d159f5effbbd9715519117457f.etc2.ctex"]
 
 [params]
 
