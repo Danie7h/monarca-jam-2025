@@ -51,11 +51,15 @@ transform = Transform3D(149.84433, 0, 0, 0, 1, 0, 0, 0, 108.05082, 0, 0, 0)
 mesh = SubResource("BoxMesh_iey7c")
 
 [node name="Key" parent="." instance=ExtResource("4_iey7c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.337406, 0, 36.169357)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6634607, 0, 36.169357)
 key_name = "key_1"
 
+[node name="Key2" parent="." instance=ExtResource("4_iey7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0712671, 0, 36.169357)
+key_name = "key_2"
+
 [node name="Door" parent="." instance=ExtResource("5_5b03i")]
-transform = Transform3D(0.027328432, 0, 0.9996266, 0, 1, 0, -0.9996266, 0, 0.027328432, -15.927567, 0, -3.6293926)
+transform = Transform3D(0.027328432, 0, 0.9996266, 0, 1, 0, -0.9996266, 0, 0.027328432, -15.927567, 0, -3.5590763)
 key_name = "key_1"
 
 [node name="Door2" parent="." instance=ExtResource("5_5b03i")]
@@ -63,5 +67,7 @@ transform = Transform3D(0.6062105, 0, -0.79530424, 0, 1, 0, 0.79530424, 0, 0.606
 
 [node name="Door3" parent="." instance=ExtResource("5_5b03i")]
 transform = Transform3D(-0.041335076, 0, -0.99914545, 0, 1, 0, 0.99914545, 0, -0.041335076, 25.194172, 0, -2.5084686)
+key_name = "key_2"
 
 [node name="Player" parent="." instance=ExtResource("2_45440")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8527355, 0, 43.395515)
