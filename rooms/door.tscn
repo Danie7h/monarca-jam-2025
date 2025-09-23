@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm0qxo5p35xvf"]
+[gd_scene load_steps=5 format=3 uid="uid://bm0qxo5p35xvf"]
 
 [ext_resource type="Script" uid="uid://bbkji5eyai6se" path="res://rooms/door.gd" id="1_7qc5k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rjirw"]
-size = Vector3(1, 2.0231934, 0.3914795)
+size = Vector3(3.8730469, 5.986145, 4.0593143)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7qc5k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7qc5k"]
+size = Vector3(3.9604492, 6.0041504, 1)
 
 [node name="Door" type="Node3D"]
 script = ExtResource("1_7qc5k")
@@ -15,9 +18,16 @@ physics_interpolation_mode = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9974365, 0.018493652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0047913, -0.046307325)
 shape = SubResource("BoxShape3D_rjirw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(0.31970477, 0, 0, 0, 0.7347866, 0, 0, 0, 0.14316961, 0, 0.9894912, 0.1277622)
+transform = Transform3D(3.8504992, 0, 0, 0, 5.703255, 0, 0, 0, 0.14316961, 0, 2.9029918, 0.1277622)
 mesh = SubResource("BoxMesh_7qc5k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01586914, 3.050171, 0)
+shape = SubResource("BoxShape3D_7qc5k")

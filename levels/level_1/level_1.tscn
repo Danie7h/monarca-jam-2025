@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfrsxeg6ivko"]
+[gd_scene load_steps=11 format=3 uid="uid://dfrsxeg6ivko"]
 
 [ext_resource type="Script" uid="uid://bihu1lsjao4wd" path="res://levels/level_1/level_1.gd" id="1_epb64"]
 [ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="2_45440"]
 [ext_resource type="PackedScene" uid="uid://b50umsco1xpws" path="res://levels/level_1/level_1.glb" id="3_epb64"]
 [ext_resource type="PackedScene" uid="uid://v6dn3djwfio8" path="res://items/key/key.tscn" id="4_iey7c"]
+[ext_resource type="PackedScene" uid="uid://bm0qxo5p35xvf" path="res://rooms/door.tscn" id="5_5b03i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k1ttk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -54,4 +55,8 @@ mesh = SubResource("BoxMesh_iey7c")
 
 [node name="Key" parent="." instance=ExtResource("4_iey7c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.337406, 0, 36.169357)
+key_name = "key_1"
+
+[node name="Door" parent="." instance=ExtResource("5_5b03i")]
+transform = Transform3D(0.027328432, 0, 0.9996266, 0, 1, 0, -0.9996266, 0, 0.027328432, 24.964, 0, -2.3236146)
 key_name = "key_1"

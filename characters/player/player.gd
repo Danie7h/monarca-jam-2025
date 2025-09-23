@@ -37,7 +37,10 @@ func _ready() -> void:
 	)
 	LEVELS.lister_get_key.connect(func(key_name: String) -> void:
 		keys.set(key_name, true)
-		print(keys)
+	)
+	LEVELS.request_open_door.connect(func(key_name: String) -> void:
+		if keys.get(key_name):
+			LEVELS.response_open_door.emit(key_name)
 	)
 
 
