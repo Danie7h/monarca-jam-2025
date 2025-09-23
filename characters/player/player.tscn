@@ -32,6 +32,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5188049, -0.07457781)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Head"]
+light_energy = 2.0
+spot_range = 13.377569
+
 [node name="Panel" type="MarginContainer" parent="."]
 anchors_preset = 1
 anchor_left = 1.0

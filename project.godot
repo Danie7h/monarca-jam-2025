@@ -21,6 +21,14 @@ LEVELS="*res://autoloads/levels.gd"
 RunConfigManager="*res://addons/run-configs/run-config-manager.gd"
 TOOLS="*res://autoloads/tools.gd"
 
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/run-configs/plugin.cfg")
