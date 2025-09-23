@@ -26,7 +26,6 @@ transform = Transform3D(3.8504992, 0, 0, 0, 5.703255, 0, 0, 0, 0.14316961, 0, 2.
 mesh = SubResource("BoxMesh_7qc5k")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01586914, 3.050171, 0)

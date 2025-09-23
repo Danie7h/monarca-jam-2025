@@ -22,11 +22,10 @@ func _ready() -> void:
 	area.connect("body_exited", func (body: Node3D) -> void:
 		if body.is_class('CharacterBody3D'):
 			mesh.visible = true
-			$StaticBody3D.rotate_x(0)
+			$StaticBody3D.set_collision_layer_value(1, true)
 	)
 	LEVELS.response_open_door.connect(func(response_key_name: String) -> void:
 		is_open = key_name == response_key_name
 		mesh.visible = !is_open
-		if is_open:
-			$StaticBody3D.rotate_x(180)
+		$StaticBody3D.set_collision_layer_value(1, !is_open)
 	)
