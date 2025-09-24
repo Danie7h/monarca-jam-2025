@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cea2n1geppnsq"]
+
+[ext_resource type="Script" uid="uid://deo5vhi73ey27" path="res://puzle/breaker_panel/breaker_panel.gd" id="1_o81qa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ht4fj"]
+size = Vector3(1, 1.3934326, 1.5014343)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o81qa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o81qa"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="BreakerPanel" type="Node3D"]
+script = ExtResource("1_o81qa")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6967163, 0.25013733)
+shape = SubResource("BoxShape3D_ht4fj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51158774, 0)
+mesh = SubResource("BoxMesh_o81qa")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 56.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o81qa")
+
+[node name="BoxContainer" type="BoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Letter_1" type="Label" parent="PanelContainer/BoxContainer"]
+layout_mode = 2
+text = "A"
+
+[node name="Letter_2" type="Label" parent="PanelContainer/BoxContainer"]
+layout_mode = 2
+text = "A"
+
+[node name="Letter_3" type="Label" parent="PanelContainer/BoxContainer"]
+layout_mode = 2
+text = "A"
+
+[node name="Letter_4" type="Label" parent="PanelContainer/BoxContainer"]
+layout_mode = 2
+text = "A	"

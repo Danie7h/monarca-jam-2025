@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cafbujdyra1px"]
+
+[ext_resource type="Script" uid="uid://dk8o404cgmpr7" path="res://levels/level_3d.gd" id="1_gbsl3"]
+[ext_resource type="PackedScene" uid="uid://cea2n1geppnsq" path="res://puzle/breaker_panel/breaker_panel.tscn" id="1_s0xps"]
+[ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="3_o7ecn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o7ecn"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_fsodv"]
+sky_material = SubResource("ProceduralSkyMaterial_o7ecn")
+
+[sub_resource type="Environment" id="Environment_vcn57"]
+background_mode = 2
+sky = SubResource("Sky_fsodv")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nla27"]
+size = Vector3(11.439453, 0.28076172, 8.685425)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nla27"]
+
+[node name="Testing" type="Node3D"]
+script = ExtResource("1_gbsl3")
+metadata/_custom_type_script = "uid://dk8o404cgmpr7"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vcn57")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14038086, 0.020935059)
+shape = SubResource("BoxShape3D_nla27")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(11.432636, 0, 0, 0, 0.29115194, 0, 0, 0, 8.759937, 0, -0.13459945, 0)
+mesh = SubResource("BoxMesh_nla27")
+
+[node name="BreakerPanel" parent="." instance=ExtResource("1_s0xps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6491536)
+code = "АСОН"
+
+[node name="Player" parent="." instance=ExtResource("3_o7ecn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.143227)

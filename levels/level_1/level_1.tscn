@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfrsxeg6ivko"]
+[gd_scene load_steps=5 format=3 uid="uid://dfrsxeg6ivko"]
 
+[ext_resource type="Script" uid="uid://dk8o404cgmpr7" path="res://levels/level_3d.gd" id="1_epb64"]
 [ext_resource type="PackedScene" uid="uid://cx0toq5x50j5k" path="res://levels/level_1/Map/map_bunker.gltf" id="1_k1ttk"]
 [ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="2_45440"]
 
@@ -7,10 +8,13 @@
 size = Vector3(81.29874, 0.5, 82.17453)
 
 [node name="Level1" type="Node3D"]
+script = ExtResource("1_epb64")
+metadata/_custom_type_script = "uid://dk8o404cgmpr7"
 
 [node name="map_bunker" parent="." instance=ExtResource("1_k1ttk")]
 
 [node name="Player" parent="." instance=ExtResource("2_45440")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.57653)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

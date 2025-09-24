@@ -15,14 +15,14 @@ const MAX_PITCH_RAD := 1.2
 @onready var camera := $Head/Camera3D
 @onready var inbox := %Inbox
 
-var is_paused := false
+var is_moved := true
 var _gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var keys: Dictionary[String, bool]
 
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	LEVELS.listen_paused.connect(func(value: bool) -> void: is_paused = value)
+	LEVELS.listen_paused.connect(func(value: bool) -> void: is_moved = value)
 	LEVELS.msg_player.connect(func(type_msg: String, msg: String) -> void:
 		var label_msg = Label.new()
 		label_msg.text = type_msg
@@ -42,6 +42,10 @@ func _ready() -> void:
 		if keys.get(key_name):
 			LEVELS.response_open_door.emit(key_name)
 	)
+	LEVELS.listen_moved_player.connect(func(is_moved_player: bool) -> void:
+		print(is_moved_player)
+		is_moved = is_moved_player
+	)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -58,7 +62,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if not is_paused:
+	if is_moved:
 		_apply_gravity(delta)
 		_handle_jump()
 		_handle_controller_look(delta)
