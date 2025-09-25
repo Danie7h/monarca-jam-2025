@@ -124,6 +124,10 @@ ui_drop_item={
 locale/translations=PackedStringArray("res://ui/i18n/translate.en.translation", "res://ui/i18n/translate.es.translation", "res://characters/player/i18n/translate.en.translation", "res://characters/player/i18n/translate.es.translation")
 locale/include_text_server_data=true
 
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
@@ -132,5 +136,5 @@ textures/vram_compression/import_etc2_astc=true
 
 [run_configs]
 
-data/configs=["{\"custom_scene\":\"res://levels/level_1/level_1.tscn\",\"environment_variables\":{},\"name\":\"bunker\",\"play_mode\":2}", "{\"custom_scene\":\"res://levels/testing/testing.tscn\",\"environment_variables\":{},\"name\":\"puzles\",\"play_mode\":2}"]
+data/configs=["{\"custom_scene\":\"res://levels/level_1/level_1.tscn\",\"environment_variables\":{},\"name\":\"bunker\",\"play_mode\":2}", "{\"custom_scene\":\"res://levels/testing/testing.tscn\",\"environment_variables\":{},\"name\":\"puzle\",\"play_mode\":2}"]
 data/current=1
