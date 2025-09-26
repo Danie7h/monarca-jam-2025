@@ -19,7 +19,6 @@ bg_color = Color(0, 0, 0, 0.61960787)
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 3
 script = ExtResource("1_508ok")
-SPEED = 2.0
 MOUSE_SENSITIVITY = 0.002
 CONTROLLER_SENSITIVITY = 2.3
 
