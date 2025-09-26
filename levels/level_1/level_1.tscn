@@ -1,11 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfrsxeg6ivko"]
+[gd_scene load_steps=11 format=3 uid="uid://dfrsxeg6ivko"]
 
 [ext_resource type="Script" uid="uid://dk8o404cgmpr7" path="res://levels/level_3d.gd" id="1_epb64"]
 [ext_resource type="PackedScene" uid="uid://cx0toq5x50j5k" path="res://levels/level_1/Map/map_bunker.gltf" id="1_k1ttk"]
 [ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="2_45440"]
+[ext_resource type="PackedScene" uid="uid://7ihihvhg40x8" path="res://assets/archivero.gltf" id="3_iey7c"]
+[ext_resource type="PackedScene" uid="uid://dshon7ro6x5xt" path="res://assets/soviet_computer.gltf" id="4_5b03i"]
+[ext_resource type="PackedScene" uid="uid://cg1a8cknlh3vf" path="res://assets/banquito.gltf" id="5_e6u7d"]
+[ext_resource type="PackedScene" uid="uid://d063v88t5v7p4" path="res://assets/caja_cables.gltf" id="6_mxc8w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_45440"]
 size = Vector3(81.29874, 0.5, 82.17453)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e6u7d"]
+data = PackedVector3Array(-2, -0.45, 0, -2, -0.099999994, -0.39999998, -2, 0.049999997, 0, -2, -0.39999998, 0.59999996, -2, -0.45, 0, -2, 0.049999997, 0, -2, -0.39999998, 0.59999996, -2, 0.049999997, 0, -2, 0.19999999, 0.59999996, -2, -1, 0.59999996, -2, -0.45, 0, -2, -0.39999998, 0.59999996, -2, 0.049999997, 0, -2, 0.8031, 0.6098, -2, 0.19999999, 0.59999996, -2, -1, 0.59999996, -2, -1, 0, -2, -0.45, 0, -2, 0.049999997, 0, -2, 0.8878, 0.088, -2, 0.8031, 0.6098, -2, 0.8878, 0.088, -2, 0.903, 0.60679996, -2, 0.8031, 0.6098, -2, 0.8878, 0.088, -2, 0.9878, 0.085, -2, 0.903, 0.60679996, -2, 0.8878, 0.088, -2, 0.9849, -0.0149, -2, 0.9878, 0.085, -2, 0.8878, 0.088, -2, 0.8849, -0.012, -2, 0.9849, -0.0149, -2, -1, 0, -2, -0.5, -0.39999998, -2, -0.45, 0, -2, -0.45, 0, -2, -0.5, -0.39999998, -2, -0.099999994, -0.39999998, -2, -1, 0, -2, -1, -0.39999998, -2, -0.5, -0.39999998, -2, -0.5, -0.39999998, -2, -0.19999999, -1, -2, -0.099999994, -0.39999998, -2, -0.5, -0.39999998, -2, -0.5, -1, -2, -0.19999999, -1, 1, -0.45, 0, 1, 0.19999999, 0.59999996, 1, 0.049999997, 0, 1, 0.19999999, 0.59999996, 1, 0.8878, 0.088, 1, 0.049999997, 0, 1, 0.19999999, 0.59999996, 1, 0.8031, 0.6098, 1, 0.8878, 0.088, 1, 0.8031, 0.6098, 1, 0.9878, 0.085, 1, 0.8878, 0.088, 1, 0.8031, 0.6098, 1, 0.903, 0.60679996, 1, 0.9878, 0.085, 1, 0.9878, 0.085, 1, 0.8849, -0.012, 1, 0.8878, 0.088, 1, 0.9878, 0.085, 1, 0.9849, -0.0149, 1, 0.8849, -0.012, 1, -0.45, 0, 1, -0.39999998, 0.59999996, 1, 0.19999999, 0.59999996, 1, -0.5, -0.39999998, 1, -0.45, 0, 1, 0.049999997, 0, 1, -0.5, -0.39999998, 1, 0.049999997, 0, 1, -0.099999994, -0.39999998, 1, -0.099999994, -0.39999998, 1, -0.5, -1, 1, -0.5, -0.39999998, 1, -0.099999994, -0.39999998, 1, -0.19999999, -1, 1, -0.5, -1, 1, -1, -0.39999998, 1, -0.45, 0, 1, -0.5, -0.39999998, 1, -1, -0.39999998, 1, -1, 0, 1, -0.45, 0, 1, -1, 0, 1, -0.39999998, 0.59999996, 1, -0.45, 0, 1, -1, 0, 1, -1, 0.59999996, 1, -0.39999998, 0.59999996, 1, -0.39999998, 0.59999996, -2, 0.19999999, 0.59999996, 1, 0.19999999, 0.59999996, 1, -0.39999998, 0.59999996, -2, -0.39999998, 0.59999996, -2, 0.19999999, 0.59999996, 1, -1, 0.59999996, -2, -0.39999998, 0.59999996, 1, -0.39999998, 0.59999996, 1, -1, 0.59999996, -2, -1, 0.59999996, -2, -0.39999998, 0.59999996, -2, -1, 0, 1, -1, 0.59999996, 1, -1, 0, -2, -1, 0, -2, -1, 0.59999996, 1, -1, 0.59999996, -2, -1, -0.39999998, -2, -1, 0, 1, -1, 0, -2, -1, -0.39999998, 1, -1, 0, 1, -1, -0.39999998, -2, -1, -0.39999998, 1, -0.5, -0.39999998, -2, -0.5, -0.39999998, -2, -1, -0.39999998, 1, -1, -0.39999998, 1, -0.5, -0.39999998, -2, -0.5, -1, 1, -0.19999999, -1, -2, -0.19999999, -1, -2, -0.5, -1, 1, -0.5, -1, 1, -0.19999999, -1, 1, -0.5, -0.39999998, -2, -0.5, -1, -2, -0.5, -0.39999998, 1, -0.5, -0.39999998, 1, -0.5, -1, -2, -0.5, -1, -2, -0.099999994, -0.39999998, 1, -0.19999999, -1, 1, -0.099999994, -0.39999998, -2, -0.099999994, -0.39999998, -2, -0.19999999, -1, 1, -0.19999999, -1, 1, -0.099999994, -0.39999998, -2, 0.049999997, 0, -2, -0.099999994, -0.39999998, 1, -0.099999994, -0.39999998, 1, 0.049999997, 0, -2, 0.049999997, 0, -2, 0.19999999, 0.59999996, 1, 0.8031, 0.6098, 1, 0.19999999, 0.59999996, -2, 0.19999999, 0.59999996, -2, 0.8031, 0.6098, 1, 0.8031, 0.6098, 1, 0.049999997, 0, -2, 0.8878, 0.088, -2, 0.049999997, 0, 1, 0.049999997, 0, 1, 0.8878, 0.088, -2, 0.8878, 0.088, 1, 0.9878, 0.085, -2, 0.903, 0.60679996, -2, 0.9878, 0.085, 1, 0.9878, 0.085, 1, 0.903, 0.60679996, -2, 0.903, 0.60679996, -2, 0.8031, 0.6098, 1, 0.903, 0.60679996, 1, 0.8031, 0.6098, -2, 0.8031, 0.6098, -2, 0.903, 0.60679996, 1, 0.903, 0.60679996, 1, 0.8849, -0.012, -2, 0.9849, -0.0149, -2, 0.8849, -0.012, 1, 0.8849, -0.012, 1, 0.9849, -0.0149, -2, 0.9849, -0.0149, -2, 0.9878, 0.085, 1, 0.9849, -0.0149, 1, 0.9878, 0.085, -2, 0.9878, 0.085, -2, 0.9849, -0.0149, 1, 0.9849, -0.0149, 1, 0.8878, 0.088, -2, 0.8849, -0.012, -2, 0.8878, 0.088, 1, 0.8878, 0.088, 1, 0.8849, -0.012, -2, 0.8849, -0.012)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mxc8w"]
+height = 0.58862305
+radius = 0.38671875
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_epb64")
@@ -21,3 +32,314 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.57653)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01399231, -0.25, -6.429611)
 shape = SubResource("BoxShape3D_45440")
+
+[node name="Decoration" type="Node3D" parent="."]
+
+[node name="soviet_computer" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -37.56175, 9.536743e-07, -11.352781)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer2" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -33.56175, 9.536743e-07, -11.352781)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer2/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer2/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer3" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, 4.4382515, 9.536743e-07, -0.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer3/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer3/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer4" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, 7.4382515, 9.536743e-07, -0.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer4/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer4/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer5" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, -7.5617485, 9.536743e-07, -0.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer5/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer5/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer6" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, -4.5617485, 9.536743e-07, -0.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer6/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer6/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer7" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(0.9999999, 0, 2.7818121e-08, 0, 1, 0, -2.7818121e-08, 0, 0.9999999, -4.5617485, 9.536743e-07, -2.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer7/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer7/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer8" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(0.9999999, 0, 2.7818121e-08, 0, 1, 0, -2.7818121e-08, 0, 0.9999999, -7.5617485, 9.536743e-07, -2.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer8/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer8/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer9" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(0.9999999, 0, 2.7818121e-08, 0, 1, 0, -2.7818121e-08, 0, 0.9999999, 7.4382515, 9.536743e-07, -2.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer9/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer9/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer10" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(0.9999999, 0, 2.7818121e-08, 0, 1, 0, -2.7818121e-08, 0, 0.9999999, 4.4382515, 9.536743e-07, -2.3527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer10/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer10/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer11" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-7.1529506e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -7.1529506e-08, 3.9382515, 9.536743e-07, -9.852781)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer11/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer11/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer12" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(-7.1529506e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -7.1529506e-08, 3.9382515, 9.536743e-07, -6.8527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer12/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer12/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer13" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(1.5895228e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 1.5895228e-07, -3.0617483, 9.536743e-07, -6.8527813)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer13/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer13/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="soviet_computer14" parent="Decoration" instance=ExtResource("4_5b03i")]
+transform = Transform3D(1.5895228e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 1.5895228e-07, -3.0617487, 9.536743e-07, -9.852781)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/soviet_computer14/SovietComputer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/soviet_computer14/SovietComputer/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e6u7d")
+
+[node name="banquito2" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, 0, -10)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito3" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.26873, 0, -9.818049)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito4" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.26873, 0, -9.818049)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito5" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.26873, 0, -3.8180494)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito6" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6096954, 0, -6.8180494)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito11" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.617443, 0, -4.0737715)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito11/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito12" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7083817, 0, -3.7555933)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito12/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito13" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8560796, 0, 1.3750134)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito13/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito14" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8560796, 0, 1.8522797)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito14/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito15" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.410827, 0, 1.2556963)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito15/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito16" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.393739, 0, 1.5738726)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito16/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito7" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.325592, 0, -9.818049)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito7/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito8" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.541437, 0, -3.9317732)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito8/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito9" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4925346, 0, -5.9203796)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito9/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="banquito10" parent="Decoration" instance=ExtResource("5_e6u7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4527626, 0, -9.261239)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/banquito10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/banquito10/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29406738, 0)
+shape = SubResource("CylinderShape3D_mxc8w")
+
+[node name="Puzzles" type="Node3D" parent="."]
+
+[node name="caja_cables" parent="Puzzles" instance=ExtResource("6_mxc8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.81156, 0.085, -38.20199)
+
+[node name="archivero" parent="Puzzles" instance=ExtResource("3_iey7c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -27.673458, 0.09133685, -11.269363)
+
+[editable path="map_bunker"]
+[editable path="Decoration/soviet_computer"]
+[editable path="Decoration/soviet_computer2"]
+[editable path="Decoration/soviet_computer3"]
+[editable path="Decoration/soviet_computer4"]
+[editable path="Decoration/soviet_computer5"]
+[editable path="Decoration/soviet_computer6"]
+[editable path="Decoration/soviet_computer7"]
+[editable path="Decoration/soviet_computer8"]
+[editable path="Decoration/soviet_computer9"]
+[editable path="Decoration/soviet_computer10"]
+[editable path="Decoration/soviet_computer11"]
+[editable path="Decoration/soviet_computer12"]
+[editable path="Decoration/soviet_computer13"]
+[editable path="Decoration/soviet_computer14"]
+[editable path="Decoration/banquito2"]
+[editable path="Decoration/banquito3"]
+[editable path="Decoration/banquito4"]
+[editable path="Decoration/banquito5"]
+[editable path="Decoration/banquito6"]
+[editable path="Decoration/banquito11"]
+[editable path="Decoration/banquito12"]
+[editable path="Decoration/banquito13"]
+[editable path="Decoration/banquito14"]
+[editable path="Decoration/banquito15"]
+[editable path="Decoration/banquito16"]
+[editable path="Decoration/banquito7"]
+[editable path="Decoration/banquito8"]
+[editable path="Decoration/banquito9"]
+[editable path="Decoration/banquito10"]
