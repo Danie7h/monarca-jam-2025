@@ -14,8 +14,12 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
-[node name="BreakerPanel" type="Node3D"]
+[node name="BreakerPanel" type="Node3D" node_paths=PackedStringArray("area", "temp")]
 script = ExtResource("1_o81qa")
+area = NodePath("Area3D")
+temp = NodePath("PanelContainer")
+puzle_name = "actived_puzle_breaker_panel"
+metadata/_custom_type_script = "uid://busap5jwhbw46"
 
 [node name="Area3D" type="Area3D" parent="."]
 

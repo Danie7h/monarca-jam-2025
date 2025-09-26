@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bji6uocorpcdk"]
+
+[ext_resource type="Script" uid="uid://pcrymffor0j4" path="res://puzle/watch/watch.gd" id="1_ead7q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ead7q"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0.5803922)
+
+[node name="Watch" type="Node3D"]
+script = ExtResource("1_ead7q")
+minutes = 5
+seconds = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ead7q")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+text = "00:00:00"

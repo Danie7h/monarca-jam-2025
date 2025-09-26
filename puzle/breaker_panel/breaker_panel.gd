@@ -1,12 +1,8 @@
-extends Node3D
+extends Puzle
 
-@onready var temp := $PanelContainer
 @onready var temp_panel := $PanelContainer/BoxContainer
-@onready var area := $Area3D
 @export var code: String
 
-var is_actived = false
-var is_player_nearby = false
 var letters := [
 	"А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", 
 	"О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Ъ", "Ы", "Ь", 
@@ -14,19 +10,6 @@ var letters := [
 ]
 var focus = 0
 var letter = 0
-
-func _ready() -> void:
-	temp.visible = is_actived
-	area.body_entered.connect(func(body: Node3D) -> void:
-		if body.is_class("CharacterBody3D"):
-			is_player_nearby = true
-			LEVELS.msg_player.emit("actived_puzle", "actived_puzle_breaker_panel")
-	)
-	area.body_exited.connect(func(body: Node3D) -> void:
-		if body.is_class("CharacterBody3D"):
-			is_player_nearby = false
-			temp.visible = false
-	)
 
 
 func _physics_process(delta: float) -> void:

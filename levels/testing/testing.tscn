@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cafbujdyra1px"]
+[gd_scene load_steps=11 format=3 uid="uid://cafbujdyra1px"]
 
 [ext_resource type="Script" uid="uid://dk8o404cgmpr7" path="res://levels/level_3d.gd" id="1_gbsl3"]
 [ext_resource type="PackedScene" uid="uid://cea2n1geppnsq" path="res://puzle/breaker_panel/breaker_panel.tscn" id="1_s0xps"]
 [ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="3_o7ecn"]
+[ext_resource type="PackedScene" uid="uid://bji6uocorpcdk" path="res://puzle/watch/watch.tscn" id="4_fsodv"]
+[ext_resource type="PackedScene" uid="uid://biac5v6f55yk2" path="res://puzle/reconnect_cables/reconnect_cables.tscn" id="5_vcn57"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o7ecn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -48,3 +50,11 @@ code = "АСОН"
 
 [node name="Player" parent="." instance=ExtResource("3_o7ecn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.143227)
+
+[node name="Watch" parent="." instance=ExtResource("4_fsodv")]
+hours = null
+is_run = true
+
+[node name="ReconnectCables" parent="." instance=ExtResource("5_vcn57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9476547, 0, 0.18176651)
+cables_colors = Array[Color]([Color(0, 0, 1, 1), Color(0, 1, 0, 1), Color(1, 0, 0, 1), Color(0, 0, 0, 1)])
