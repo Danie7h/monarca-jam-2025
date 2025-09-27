@@ -6,11 +6,12 @@ class_name Puzle
 @export var temp: Control
 @export var puzle_name: String
 
+
 var is_actived = false
 var is_player_nearby = false
 
 
-func _ready() -> void:
+func _initialize_pulze() -> void:
 	if temp:
 		temp.visible = is_actived
 	area.body_entered.connect(func(body: Node3D) -> void:
@@ -23,3 +24,19 @@ func _ready() -> void:
 			is_player_nearby = false
 			temp.visible = false
 	)
+	
+	
+func _input_pulze():
+	pass
+
+
+func _physics_process(delta: float) -> void:
+	if is_player_nearby and Input.is_action_just_pressed("ui_get_object"):
+		is_actived = true
+		temp.visible = is_actived
+		LEVELS.listen_moved_player.emit(false)
+	if is_actived and Input.is_action_just_pressed("ui_drop_item"):
+		is_actived = false
+		temp.visible = is_actived
+		LEVELS.listen_moved_player.emit(true)
+	_input_pulze()

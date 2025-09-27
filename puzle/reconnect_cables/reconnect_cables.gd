@@ -9,6 +9,7 @@ extends Puzle
 
 
 func _ready() -> void:
+	_initialize_pulze()
 	var count = 0
 	for x in cables_colors:
 		count += 1
@@ -17,3 +18,8 @@ func _ready() -> void:
 		label.text = str(count)
 		panel_container.add_child(label)
 		cables.add_child(panel_container)
+
+
+
+func _input_pulze():
+	pass

@@ -1,11 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://biac5v6f55yk2"]
 
 [ext_resource type="Script" uid="uid://dfm6pxd0ymvpi" path="res://puzle/reconnect_cables/reconnect_cables.gd" id="1_h440q"]
+[ext_resource type="PackedScene" uid="uid://d063v88t5v7p4" path="res://assets/caja_cables.gltf" id="2_ibfdr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lqwhi"]
-size = Vector3(2.5260696, 1.5196533, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_h440q"]
+size = Vector3(0.7728138, 0.7113342, 0.4204712)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h440q"]
 content_margin_left = 4.0
@@ -19,17 +18,15 @@ script = ExtResource("1_h440q")
 area = NodePath("Area3D")
 temp = NodePath("PanelContainer")
 puzle_name = "reconnect_cables"
-metadata/_custom_type_script = "uid://busap5jwhbw46"
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.742466, 0.7554321, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18246174, 1.4437103, -0.00015258789)
 shape = SubResource("BoxShape3D_lqwhi")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.8119678, 0, 0, 0, 1, 0, 0, 0, 1, 0.10791731, 0.5036135, 0)
-mesh = SubResource("BoxMesh_h440q")
+[node name="caja_cables" parent="Area3D" instance=ExtResource("2_ibfdr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_right = 40.0

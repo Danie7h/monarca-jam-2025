@@ -12,21 +12,17 @@ var focus = 0
 var letter = 0
 
 
-func _physics_process(delta: float) -> void:
-	if is_player_nearby and Input.is_action_just_pressed("ui_get_object"):
-		is_actived = true
-		temp.visible = is_actived
-		LEVELS.listen_moved_player.emit(false)
-	if is_actived and Input.is_action_just_pressed("ui_drop_item"):
-		is_actived = false
-		temp.visible = is_actived
-		LEVELS.listen_moved_player.emit(true)
-	if is_actived:	
+func _ready() -> void:
+	_initialize_pulze()
+
+
+func _input_pulze():
+	if is_actived:
 		handle_letter()
 		change_focus()
 		resolve_code()
-		
-		
+
+
 func resolve_code() -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		var input_code := ""

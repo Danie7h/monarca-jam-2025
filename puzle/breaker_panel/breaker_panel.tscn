@@ -1,11 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cea2n1geppnsq"]
 
 [ext_resource type="Script" uid="uid://deo5vhi73ey27" path="res://puzle/breaker_panel/breaker_panel.gd" id="1_o81qa"]
+[ext_resource type="PackedScene" uid="uid://btpipinujesnn" path="res://assets/archivero.gltf" id="2_h486w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ht4fj"]
-size = Vector3(1, 1.3934326, 1.5014343)
-
-[sub_resource type="BoxMesh" id="BoxMesh_o81qa"]
+size = Vector3(0.85943604, 1.5023499, 1.7623215)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o81qa"]
 bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
@@ -19,17 +18,15 @@ script = ExtResource("1_o81qa")
 area = NodePath("Area3D")
 temp = NodePath("PanelContainer")
 puzle_name = "actived_puzle_breaker_panel"
-metadata/_custom_type_script = "uid://busap5jwhbw46"
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6967163, 0.25013733)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0030212402, 0.7511749, 0.41731644)
 shape = SubResource("BoxShape3D_ht4fj")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51158774, 0)
-mesh = SubResource("BoxMesh_o81qa")
+[node name="archivero" parent="Area3D" instance=ExtResource("2_h486w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_right = 56.0

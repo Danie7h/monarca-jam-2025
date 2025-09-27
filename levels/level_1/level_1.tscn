@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfrsxeg6ivko"]
+[gd_scene load_steps=12 format=3 uid="uid://dfrsxeg6ivko"]
 
 [ext_resource type="Script" uid="uid://dk8o404cgmpr7" path="res://levels/level_3d.gd" id="1_epb64"]
 [ext_resource type="PackedScene" uid="uid://cx0toq5x50j5k" path="res://levels/level_1/Map/map_bunker.gltf" id="1_k1ttk"]
 [ext_resource type="PackedScene" uid="uid://btf4twiv287ip" path="res://characters/player/player.tscn" id="2_45440"]
-[ext_resource type="PackedScene" uid="uid://7ihihvhg40x8" path="res://assets/archivero.gltf" id="3_iey7c"]
+[ext_resource type="PackedScene" uid="uid://btpipinujesnn" path="res://assets/archivero.gltf" id="3_iey7c"]
 [ext_resource type="PackedScene" uid="uid://dshon7ro6x5xt" path="res://assets/soviet_computer.gltf" id="4_5b03i"]
 [ext_resource type="PackedScene" uid="uid://cg1a8cknlh3vf" path="res://assets/banquito.gltf" id="5_e6u7d"]
-[ext_resource type="PackedScene" uid="uid://d063v88t5v7p4" path="res://assets/caja_cables.gltf" id="6_mxc8w"]
+[ext_resource type="PackedScene" uid="uid://biac5v6f55yk2" path="res://puzle/reconnect_cables/reconnect_cables.tscn" id="7_j48du"]
+[ext_resource type="PackedScene" uid="uid://cea2n1geppnsq" path="res://puzle/breaker_panel/breaker_panel.tscn" id="8_j48du"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_45440"]
 size = Vector3(81.29874, 0.5, 82.17453)
@@ -307,11 +308,14 @@ shape = SubResource("CylinderShape3D_mxc8w")
 
 [node name="Puzzles" type="Node3D" parent="."]
 
-[node name="caja_cables" parent="Puzzles" instance=ExtResource("6_mxc8w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.81156, 0.085, -38.20199)
+[node name="ReconnectCables" parent="Puzzles" instance=ExtResource("7_j48du")]
+transform = Transform3D(-0.06411431, 0, -0.99794245, 0, 1, 0, 0.99794245, 0, -0.06411431, 28.812, 0.085, -38.202)
 
 [node name="archivero" parent="Puzzles" instance=ExtResource("3_iey7c")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -27.673458, 0.09133685, -11.269363)
+
+[node name="BreakerPanel" parent="Puzzles" instance=ExtResource("8_j48du")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.673, 0.091, -11.269)
 
 [editable path="map_bunker"]
 [editable path="Decoration/soviet_computer"]
