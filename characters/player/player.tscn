@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://btf4twiv287ip"]
+[gd_scene load_steps=7 format=3 uid="uid://btf4twiv287ip"]
 
 [ext_resource type="Script" uid="uid://bnajmtihepvqa" path="res://characters/player/player.gd" id="1_508ok"]
+[ext_resource type="Shader" uid="uid://dja1tj2xiy4gi" path="res://shaders/crt.gdshader" id="2_xxgcw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b886q"]
 radius = 0.3564453
@@ -15,6 +16,30 @@ content_margin_top = 8.0
 content_margin_right = 8.0
 content_margin_bottom = 8.0
 bg_color = Color(0, 0, 0, 0.61960787)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_exd8k"]
+shader = ExtResource("2_xxgcw")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.0610000028975
+shader_parameter/scanlines_width = 0.4390000208525
+shader_parameter/grille_opacity = 0.027000001282499998
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 0.10000000149012
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.0930000044175
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.0630000504924999
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.17200000817
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 3
@@ -36,8 +61,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5188049, -0.07457781)
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
-light_color = Color(0.9999997, 0.9762482, 0.39327654, 1)
-light_energy = 3.599
 spot_range = 10.0
 
 [node name="Panel" type="MarginContainer" parent="."]
@@ -62,3 +85,12 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 8
 vertical = true
+
+[node name="CRT" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_exd8k")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
