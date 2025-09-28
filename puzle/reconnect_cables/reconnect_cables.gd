@@ -10,15 +10,19 @@ extends Puzle
 
 func _ready() -> void:
 	_initialize_pulze()
-	var count = 0
-	for x in cables_colors:
-		count += 1
-		var panel_container := PanelContainer.new() 
-		var label := Label.new()
-		label.text = str(count)
-		panel_container.add_child(label)
-		cables.add_child(panel_container)
-
+	for i in cables_colors:
+		var cable = Connector.new()
+		var label_cable = Label.new()
+		var plug = Connector.new()
+		var label_plug = Label.new()
+		#label_cable.text = "cable"
+		#label_plug.text = "plug"
+		cable.add_child(label_cable)
+		cable.color = i
+		plug.add_child(label_plug)
+		plug.color = i
+		cables.add_child(cable)
+		plugs.add_child(plug)
 
 
 func _input_pulze():
