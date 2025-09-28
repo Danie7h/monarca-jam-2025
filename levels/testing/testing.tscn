@@ -46,7 +46,7 @@ mesh = SubResource("BoxMesh_nla27")
 
 [node name="BreakerPanel" parent="." instance=ExtResource("1_s0xps")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6491536)
-code = "АСОН"
+code = "ACOH"
 
 [node name="Player" parent="." instance=ExtResource("3_o7ecn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.143227)

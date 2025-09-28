@@ -13,6 +13,10 @@ var letter = 0
 
 
 func _ready() -> void:
+	for i in code.split(""):
+		var letter := Label.new()
+		letter.text = letters[0]
+		temp_panel.add_child(letter)
 	_initialize_pulze()
 
 
