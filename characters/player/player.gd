@@ -14,11 +14,12 @@ const MAX_PITCH_RAD := 1.2
 @onready var head := $Head
 @onready var camera := $Head/Camera3D
 @onready var inbox := %Inbox
+@onready var steps: AudioStreamPlayer = $Steps
 
 var is_moved := true
 var _gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var keys: Dictionary[String, bool]
-
+var steps_time:float = 0.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -37,6 +38,7 @@ func _ready() -> void:
 	)
 	LEVELS.lister_get_key.connect(func(key_name: String) -> void:
 		keys.set(key_name, true)
+		print(keys)
 	)
 	LEVELS.request_open_door.connect(func(key_name: String) -> void:
 		if keys.get(key_name):
@@ -68,9 +70,17 @@ func _physics_process(delta: float) -> void:
 		_handle_controller_look(delta)
 		var input_direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		_handle_movement(input_direction)
+		handle_step_sounds(delta, input_direction)
 		move_and_slide()
 
-
+func handle_step_sounds(delta, input_dir)->void:
+	steps_time += delta
+	if steps_time >=0.50 and input_dir != Vector2.ZERO:
+		steps.pitch_scale = randf_range(0.8,1.1)
+		steps_time = 0
+		steps.play()
+	
+	
 func _apply_gravity(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= _gravity * delta
@@ -89,13 +99,15 @@ func _handle_controller_look(delta: float) -> void:
 
 func _handle_movement(input_dir: Vector2) -> void:
 	var direction: Vector3 = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
+	
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		
+		
 
 
 func _apply_look_rotation(rotation_delta: Vector2) -> void:

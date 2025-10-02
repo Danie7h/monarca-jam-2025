@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctvikc8pmahg4"
+path="res://.godot/imported/acero3_b.wav-3c7f2bac46c0a5c5e39a3ca03e8e1a3f.sample"
+
+[deps]
+
+source_file="res://audio/Sonidos Random (los escucha el jugador)/acero3_b.wav"
+dest_files=["res://.godot/imported/acero3_b.wav-3c7f2bac46c0a5c5e39a3ca03e8e1a3f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

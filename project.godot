@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Monarca Game Jam 2025"
+config/name=" INSomnus"
 run/main_scene="uid://ckpsklp77kon1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -123,6 +123,10 @@ ui_drop_item={
 
 locale/translations=PackedStringArray("res://ui/i18n/translate.en.translation", "res://ui/i18n/translate.es.translation", "res://characters/player/i18n/translate.en.translation", "res://characters/player/i18n/translate.es.translation")
 locale/include_text_server_data=true
+
+[layer_names]
+
+3d_render/layer_10="EditorOnly"
 
 [physics]
 

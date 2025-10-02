@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqstixw1ioiwb"]
+
+[ext_resource type="Texture2D" uid="uid://v1t02b55ipe6" path="res://assets/key_texture.png" id="1_up0pn"]
+
+[resource]
+resource_name = "KeyMaterial"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_up0pn")
+texture_filter = 2

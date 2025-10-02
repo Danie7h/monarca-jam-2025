@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqtsughgg4o5p"
+path="res://.godot/imported/acero4_c.wav-8e5410d265a8e09f8c690323dcdaf94e.sample"
+
+[deps]
+
+source_file="res://audio/Sonidos Random (los escucha el jugador)/acero4_c.wav"
+dest_files=["res://.godot/imported/acero4_c.wav-8e5410d265a8e09f8c690323dcdaf94e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

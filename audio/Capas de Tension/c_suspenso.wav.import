@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gmi5026qq4k3"
+path="res://.godot/imported/c_suspenso.wav-4b41d39acb091bceec203ce228fcfb9a.sample"
+
+[deps]
+
+source_file="res://audio/Capas de Tension/c_suspenso.wav"
+dest_files=["res://.godot/imported/c_suspenso.wav-4b41d39acb091bceec203ce228fcfb9a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

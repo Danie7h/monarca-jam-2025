@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cu4s205vje4n3"
+path="res://.godot/imported/linea_muerta(loop).wav-0a690c5905d9bb35b0b80e681c49b193.sample"
+
+[deps]
+
+source_file="res://audio/Oficinas de Mando/linea_muerta(loop).wav"
+dest_files=["res://.godot/imported/linea_muerta(loop).wav-0a690c5905d9bb35b0b80e681c49b193.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

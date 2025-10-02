@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://defjrk02g5pm5"
+path="res://.godot/imported/entidad2_d.wav-315995da4ad19257b58c8f7cb689dc9e.sample"
+
+[deps]
+
+source_file="res://audio/Sonidos Random (los escucha el jugador)/entidad2_d.wav"
+dest_files=["res://.godot/imported/entidad2_d.wav-315995da4ad19257b58c8f7cb689dc9e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

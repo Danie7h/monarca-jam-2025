@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm0qxo5p35xvf"]
+[gd_scene load_steps=7 format=3 uid="uid://bm0qxo5p35xvf"]
 
 [ext_resource type="Script" uid="uid://bbkji5eyai6se" path="res://rooms/door.gd" id="1_7qc5k"]
+[ext_resource type="PackedScene" uid="uid://di6jrjt12aa48" path="res://assets/Puerta.gltf" id="2_mv7pb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rjirw"]
 size = Vector3(3.8730469, 5.986145, 4.0593143)
 
-[sub_resource type="BoxMesh" id="BoxMesh_7qc5k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mv7pb"]
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+albedo_color = Color(0, 0.28235295, 0.32941177, 0.25490198)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8fvs"]
+material = SubResource("StandardMaterial3D_mv7pb")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7qc5k"]
 size = Vector3(3.9604492, 6.0041504, 1)
@@ -21,12 +29,21 @@ physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0047913, -0.046307325)
 shape = SubResource("BoxShape3D_rjirw")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(1.7345859, 0, 0, 0, 3.3183603, 0, 0, 0, 0.14316961, 0, 1.6742272, 0.1277622)
-mesh = SubResource("BoxMesh_7qc5k")
+[node name="Puerta2" parent="Area3D" instance=ExtResource("2_mv7pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Window" type="MeshInstance3D" parent="Area3D/Puerta2"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1, 2, 8.742278e-08)
+mesh = SubResource("PlaneMesh_d8fvs")
+skeleton = NodePath("../..")
+
+[node name="Puerta" parent="Area3D/Puerta2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01586914, 3.050171, 0)
 shape = SubResource("BoxShape3D_7qc5k")
+
+[editable path="Area3D/Puerta2"]

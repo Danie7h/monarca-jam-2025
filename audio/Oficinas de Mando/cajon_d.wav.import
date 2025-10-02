@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drel2p72eh44u"
+path="res://.godot/imported/cajon_d.wav-993e07030a89266d1670632fc34a2698.sample"
+
+[deps]
+
+source_file="res://audio/Oficinas de Mando/cajon_d.wav"
+dest_files=["res://.godot/imported/cajon_d.wav-993e07030a89266d1670632fc34a2698.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bm0asfg47g8or"
+path="res://.godot/imported/lock_door_b.wav-4ec8704a5126daeb63879098d42969fc.sample"
+
+[deps]
+
+source_file="res://audio/Sala Principal/lock_door_b.wav"
+dest_files=["res://.godot/imported/lock_door_b.wav-4ec8704a5126daeb63879098d42969fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2721bhbujuv6"
+path="res://.godot/imported/zum_compu(loop).wav-713646e65efa984690892309d8cdf680.sample"
+
+[deps]
+
+source_file="res://audio/Sala Principal/zum_compu(loop).wav"
+dest_files=["res://.godot/imported/zum_compu(loop).wav-713646e65efa984690892309d8cdf680.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -62,5 +62,6 @@ func valid_code(input_code: String) -> void:
 	if input_code == code:
 		LEVELS.listen_moved_player.emit(true)
 		LEVELS.msg_player.emit("msg_valid_code", "code_valid")
+		
 	else:
 		LEVELS.msg_player.emit("msg_valid_code", "code_not_valid")

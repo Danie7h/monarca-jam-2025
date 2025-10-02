@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://box1gha7shtpg"
+path="res://.godot/imported/pick_llaves_a.wav-4b5696753e359a259532cec061fd9171.sample"
+
+[deps]
+
+source_file="res://audio/Oficinas de Mando/pick_llaves_a.wav"
+dest_files=["res://.godot/imported/pick_llaves_a.wav-4b5696753e359a259532cec061fd9171.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

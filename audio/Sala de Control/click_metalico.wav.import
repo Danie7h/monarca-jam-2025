@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4uw1sixf88fk"
+path="res://.godot/imported/click_metalico.wav-3ad0cf5f2bbba4080639706cd00f69a9.sample"
+
+[deps]
+
+source_file="res://audio/Sala de Control/click_metalico.wav"
+dest_files=["res://.godot/imported/click_metalico.wav-3ad0cf5f2bbba4080639706cd00f69a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

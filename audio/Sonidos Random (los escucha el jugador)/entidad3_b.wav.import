@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cq1uhsd3iqpa1"
+path="res://.godot/imported/entidad3_b.wav-cbb9d859b1852ce3ab482e1244375282.sample"
+
+[deps]
+
+source_file="res://audio/Sonidos Random (los escucha el jugador)/entidad3_b.wav"
+dest_files=["res://.godot/imported/entidad3_b.wav-cbb9d859b1852ce3ab482e1244375282.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

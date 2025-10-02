@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://btf4twiv287ip"]
+[gd_scene load_steps=8 format=3 uid="uid://btf4twiv287ip"]
 
 [ext_resource type="Script" uid="uid://bnajmtihepvqa" path="res://characters/player/player.gd" id="1_508ok"]
 [ext_resource type="Shader" uid="uid://dja1tj2xiy4gi" path="res://shaders/crt.gdshader" id="2_xxgcw"]
+[ext_resource type="AudioStream" uid="uid://c2n3eotvp88e8" path="res://audio/Pasos/metal_concreto/foot_4.wav" id="3_exd8k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b886q"]
 radius = 0.3564453
@@ -20,9 +21,9 @@ bg_color = Color(0, 0, 0, 0.61960787)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_exd8k"]
 shader = ExtResource("2_xxgcw")
 shader_parameter/overlay = false
-shader_parameter/scanlines_opacity = 0.0610000028975
-shader_parameter/scanlines_width = 0.4390000208525
-shader_parameter/grille_opacity = 0.02700000128249999
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.4830000229425
+shader_parameter/grille_opacity = 0.01600000076
 shader_parameter/resolution = Vector2(640, 480)
 shader_parameter/pixelate = false
 shader_parameter/roll = false
@@ -30,22 +31,23 @@ shader_parameter/roll_speed = 8.0
 shader_parameter/roll_size = 0.0
 shader_parameter/roll_variation = 0.10000000149012
 shader_parameter/distort_intensity = 0.0
-shader_parameter/noise_opacity = 0.0930000044175
+shader_parameter/noise_opacity = 0.050000002375
 shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = 0.0630000504924999
-shader_parameter/brightness = 1.4
-shader_parameter/discolor = true
+shader_parameter/static_noise_intensity = 0.038000001805
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.5150000000000001
+shader_parameter/discolor = false
 shader_parameter/warp_amount = 0.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.17200000817
+shader_parameter/vignette_opacity = 0.38000001805
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 3
 script = ExtResource("1_508ok")
-MOUSE_SENSITIVITY = 0.002
-CONTROLLER_SENSITIVITY = 2.3
+SPEED = 4.0
+JUMP_VELOCITY = 2.0
+MOUSE_SENSITIVITY = 0.01
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.891994, 0)
@@ -58,12 +60,14 @@ mesh = SubResource("CapsuleMesh_508ok")
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5188049, -0.07457781)
 
-[node name="Camera3D" type="Camera3D" parent="Head"]
+[node name="Camera3D" type="Camera3D" parent="Head" groups=["player"]]
+cull_mask = 1048063
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
 spot_range = 10.0
 
 [node name="Panel" type="MarginContainer" parent="."]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -87,7 +91,6 @@ theme_override_constants/separation = 8
 vertical = true
 
 [node name="CRT" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_exd8k")
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,3 +98,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Steps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_exd8k")

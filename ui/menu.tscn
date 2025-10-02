@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://8o1a4pglcsx6"]
+[gd_scene load_steps=8 format=3 uid="uid://8o1a4pglcsx6"]
 
 [ext_resource type="Script" uid="uid://ucdksh2hp6hy" path="res://ui/menu.gd" id="1_bwjgb"]
 [ext_resource type="PackedScene" uid="uid://xxmlv1a104va" path="res://ui/panel_menu.tscn" id="2_udkah"]
+[ext_resource type="Texture2D" uid="uid://52v1cs3ixxm" path="res://assets/mgj25-propuesta_titulo.png" id="3_4c782"]
+[ext_resource type="PackedScene" uid="uid://cx0toq5x50j5k" path="res://levels/level_1/Map/map_bunker.gltf" id="4_fcydj"]
+[ext_resource type="Environment" uid="uid://ce4uwjqdnsoer" path="res://Environments/bunker_env.tres" id="5_jbsda"]
+[ext_resource type="AudioStream" uid="uid://ddnen6ko8s0jy" path="res://audio/Ambientes/general.wav" id="6_jbsda"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxhxg"]
 content_margin_left = 50.0
@@ -19,6 +23,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bwjgb")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 479.0
+offset_bottom = 114.0
+texture = ExtResource("3_4c782")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -30,10 +42,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qxhxg")
 
 [node name="BoxContainer" type="BoxContainer" parent="PanelContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 vertical = true
 
 [node name="DisplayMenu" type="PanelContainer" parent="PanelContainer/BoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -45,12 +59,24 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "btn_start"
 
-[node name="Credited" type="Button" parent="PanelContainer/BoxContainer/PanelMenu"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "btn_credited"
-
 [node name="Exit" type="Button" parent="PanelContainer/BoxContainer/PanelMenu"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "btn_exit"
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="map_bunker" parent="Node3D" instance=ExtResource("4_fcydj")]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97115695, 29.44732)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Node3D"]
+environment = ExtResource("5_jbsda")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.9226458, 0.38564843, 0, -0.38564843, 0.9226458, 0, 1.2011335, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jbsda")
+autoplay = true

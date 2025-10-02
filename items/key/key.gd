@@ -24,4 +24,5 @@ func _physics_process(delta: float) -> void:
 	if is_get:
 		if Input.is_action_just_pressed("ui_get_object"):
 			LEVELS.lister_get_key.emit(key_name)
+			
 			self.queue_free()
